@@ -24,34 +24,31 @@
     </nav>
   </header>
   <main class="container-fluid">
-    <h1>PRESUPUESTO APP</h1>
-    <section class="container">
-      <section class="left">
-
-        <div class="card w-50 mb-3 text-success-emphasis bg-success-subtle border border-success p-2 mb-2 rounded-3">
+    <section class="container d-flex justify-content-evenly mt-5">
+      <section class="left w-50 me-3">
+        <div class="card w-100 mb-3 text-success-emphasis bg-success-subtle border border-success p-2 mb-2 rounded-3">
           <div class="card-body">
-            <label for="presupuesto" class="form-label">Ingresa Tu Presupuesto</>
-
-              <input type="text" name="" id="presupuesto" class="form-control">
-
-              <a href="#" class="btn btn-primary  bg-success border border-success p-2 mb-2 text-light">Calcular</a>
+            <label for="presupuesto" class="form-label">Ingresa Tu Presupuesto</label>
+            <input type="text" name="" id="presupuesto" class="form-control">
+            <button type="submit" class="btn btn-primary bg-success border border-success p-2 mb-2 mt-2 text-light" onclick="ingresoPresupuesto()">Calcular</button>
           </div>
         </div>
-        <div class="card w-50 mb-3 text-success-emphasis bg-success-subtle border border-success p-2 mb-2 rounded-3">
-          <div class="card-body">
-            <label for="presupuesto" class="form-label">Ingresa Tu Presupuesto</>
 
-              <input type="text" name="" id="presupuesto" class="form-control">
-
-              <a href="#" class="btn btn-primary  bg-success border border-success p-2 mb-2 text-light">Añadir Gasto</a>
+        <div class="card w-100 mb-3 text-danger bg-danger-subtle border border-danger p-2 mb-2 rounded-3">
+          <div class="card-body ">
+            <label for="presupuesto" class="form-label">Ingresa El Nombre Del Gasto</label>
+            <input type="text" name="" id="nombregasto" class="form-control">
+            <label for="presupuesto" class="form-label">Ingresa La Cantidad Del Gasto</label>
+            <input type="text" name="" id="montogasto" class="form-control">
+            <button type="submit" class="btn btn-primary bg-danger border border-danger p-2 mb-2 mt-2 text-light" onclick="ingresoGasto()">Añadir Gasto</button>
           </div>
         </div>
       </section>
-      <section class="right">
-        <div class="top">
+      <section class="right w-50 ms-2">
+        <div class="top d-flex justify-content-between w-100">
           <div class="top_pres">
             <h5>PRESUPUESTO</h5>
-            <p id="presupuesto_tabla">$10000</p>
+            <p id="presupuesto_tabla"></p>
           </div>
           <div class="top_gastos">
             <h5>GASTOS</h5>
@@ -61,19 +58,23 @@
             <h5>SALDO</h5>
             <p id="presupuesto_tabla">$993750</p>
           </div>
-
         </div>
-        <div class="botto">
-          <table>
+
+        <div class="bottom text-center">
+          <table class="table">
             <thead>
-              <th>GASTO</th>
-              <th>VALOR</th>
-              <th>BORRAR</th>
+              <tr>
+                <th scope="col">GASTO</th>
+                <th scope="col">VALOR</th>
+                <th scope="col">BORRAR</th>
+              </tr>
             </thead>
-            <tbody>
-              <td>Aceitw</td>
-              <td>$3750</td>
-              <td>borrar</td>
+            <tbody id="tbody">
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
             </tbody>
           </table>
         </div>
