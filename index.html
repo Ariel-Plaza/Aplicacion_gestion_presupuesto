@@ -30,7 +30,7 @@
           <div class="card-body">
             <label for="presupuesto" class="form-label">Ingresa Tu Presupuesto</label>
             <input type="text" name="" id="presupuesto" class="form-control">
-            <button type="submit" class="btn btn-primary bg-success border border-success p-2 mb-2 mt-2 text-light" onclick="ingresoPresupuesto()">Calcular</button>
+            <button type="submit" class="btn btn-primary bg-success border border-success p-2 mb-2 mt-2 text-light" id="enviopresupuesto">Calcular</button>
           </div>
         </div>
 
@@ -40,7 +40,7 @@
             <input type="text" name="" id="nombregasto" class="form-control">
             <label for="presupuesto" class="form-label">Ingresa La Cantidad Del Gasto</label>
             <input type="text" name="" id="montogasto" class="form-control">
-            <button type="submit" class="btn btn-primary bg-danger border border-danger p-2 mb-2 mt-2 text-light" onclick="ingresoGasto()">Añadir Gasto</button>
+            <button type="submit" class="btn btn-primary bg-danger border border-danger p-2 mb-2 mt-2 text-light" id="enviogasto">Añadir Gasto</button>
           </div>
         </div>
       </section>
@@ -71,9 +71,9 @@
             </thead>
             <tbody id="tbody">
               <tr>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>Gasto1</td>
+                <td>$100</td>
+                <td>BotonBorrar</td>
               </tr>
             </tbody>
           </table>

@@ -3,67 +3,85 @@
 // - Bucle for.
 // - Arreglos.
 // - Métodos de matrices.
-// - Funciones. -           Listo
+// - Funciones. -
 // - Funciones de flecha.
-// - Variables. -           Listo
-// - Declaración de variables de ES6.  Listo
-// - Objetos                 CASI
+// - Variables. -
+// - Declaración de variables de ES6.
+// - Objetos
 //------------------------------------------------
 
-// - Variables.
 
-// captura presupuesto
-let ingresopresupuesto = document.getElementById("presupuesto");
-let nombregasto = document.getElementById("nombregasto");
-let montogasto = document.getElementById("montogasto");
+// PESUPUESTO-------------------------------------
+class Presupuesto {
+  constructor(monto) {
+    this.monto = monto; //
+    this.gastos = [];
+  }
+  agregarMonto(monto) {
+    // console.log(monto)
+    if (isNaN(monto) || monto <= 0) {
+      alert("Ingrese un monto valido");
+    } else {
+      this.monto += parseInt(monto);
+    }
+  }
+  restarSaldo() {}
+  mostrarSaldo() {}
+}
+//la inicio con monto 0
+const presupuesto = new Presupuesto(0);
 
-//objeto
 
-// function Valoresglobales(presupuesto, gastos, saldo) {
-//   this.presupuesto = presupuesto;
-//   this.gastos = gastos;
-//   this.saldo = saldo;
-// }
 
-// - Funciones
-function ingresoPresupuesto() {
-  let presTabla = document.getElementById("presupuesto_tabla");
-    presTabla.innerHTML = ingresopresupuesto.value;
-};
 
-function Gasto(nombre, valor) {
-  this.nombre = nombre;
-  this.valor = valor;
+const botonAgregarMonto = document.getElementById("enviopresupuesto");
+botonAgregarMonto.addEventListener("click", agregarMontoPresupuesto);
+
+function agregarMontoPresupuesto() {
+  const ingresoMonto = document.getElementById("presupuesto").value;
+  presupuesto.agregarMonto(ingresoMonto);
+  // console.log(presupuesto.monto);
 }
 
-gastos = [];
+// GASTOS -----------------------------------
 
+// objeto Gasto
+class Gastos {
+  constructor(nombre, gasto) {
+    this.nombregasto = nombre;
+    this.montogasto = gasto;
+    this.registrosgastos = [];
+  }
+  agregarGasto(gasto) {
+    if (isNaN(gasto) || gasto <= 0) {
+      alert("Ingrese un monto valido");
+    } else {
+      this.montogasto += parseInt(gasto);
+      
+    }
+  }
+}
 
+const nuevogasto = new Gastos("",0);
 
- let linea = ""
-function ingresoGasto() {
-  let tbody = document.getElementById("tbody");
+const botonAgregarGasto = document.getElementById("enviogasto");
+botonAgregarGasto.addEventListener("click", agregarGasto);
 
-  let nomGasto = nombregasto.value;
-  let monGasto = montogasto.value;
+function agregarGasto() {
+  const montoGasto = document.getElementById("montogasto").value;
+  console.log(montoGasto);
+  const nombreGasto = document.getElementById("nombregasto").value;
+  console.log(nombreGasto);
+
+  nuevogasto.agregarGasto(montoGasto,nombreGasto);
+  console.log(nuevogasto.montogasto);
+  nuevogasto.registrosgastos.push({montoGasto, nombreGasto});
   
-  linea = linea + "<tr>"
-  linea = linea + "<td>" + nomGasto + "</td><td>" + monGasto + "</td><td> borrar </td";
-linea = linea + "</tr>"
-  tbody.innerHTML = linea;
-
-  const nuevoGasto = new Gasto(nomGasto, monGasto);
-  gastos.push(nuevoGasto);
-  console.log(gastos)
-
-
+  console.log(nuevogasto.registrosgastos);
+  // nuevogasto.montogasto
 }
 
-//creacion de un array con objetos en el interior que se puedan borrar.
-
-
-
-
-
-let pedro = new Gasto("Aceite", "2500");
-console.log(pedro)
+// nombre Gasto
+// monto Gasto
+// instancias gasto1(gasto, nombre);
+// arraygastos[];
