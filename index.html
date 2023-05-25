@@ -20,7 +20,6 @@
 <body>
   <header>
     <nav>
-
     </nav>
   </header>
   <main class="container-fluid">
@@ -30,7 +29,8 @@
           <div class="card-body">
             <label for="presupuesto" class="form-label">Ingresa Tu Presupuesto</label>
             <input type="text" name="" id="presupuesto" class="form-control">
-            <button type="submit" class="btn btn-primary bg-success border border-success p-2 mb-2 mt-2 text-light" id="enviopresupuesto">Calcular</button>
+            <button type="submit" class="btn btn-primary bg-success border border-success p-2 mb-2 mt-2 text-light"
+              id="enviopresupuesto">Calcular</button>
           </div>
         </div>
 
@@ -40,7 +40,9 @@
             <input type="text" name="" id="nombregasto" class="form-control">
             <label for="presupuesto" class="form-label">Ingresa La Cantidad Del Gasto</label>
             <input type="text" name="" id="montogasto" class="form-control">
-            <button type="submit" class="btn btn-primary bg-danger border border-danger p-2 mb-2 mt-2 text-light" id="enviogasto">Añadir Gasto</button>
+            <button type="submit" class="btn btn-primary bg-danger border border-danger p-2 mb-2 mt-2 text-light"
+              id="enviogasto">Añadir Gasto</button>
+            
           </div>
         </div>
       </section>
@@ -48,15 +50,15 @@
         <div class="top d-flex justify-content-between w-100">
           <div class="top_pres">
             <h5>PRESUPUESTO</h5>
-            <p id="presupuesto_tabla"></p>
+            <p id="presupuestoTabla"></p>
           </div>
           <div class="top_gastos">
             <h5>GASTOS</h5>
-            <p id="presupuesto_tabla">$6250</p>
+            <p id="gastosTabla"></p>
           </div>
           <div class="top_gastos">
             <h5>SALDO</h5>
-            <p id="presupuesto_tabla">$993750</p>
+            <p id="saldoTabla"></p>
           </div>
         </div>
 
@@ -70,19 +72,15 @@
               </tr>
             </thead>
             <tbody id="tbody">
-              <tr>
-                <td>Gasto1</td>
-                <td>$100</td>
-                <td>BotonBorrar</td>
-              </tr>
+              
             </tbody>
           </table>
+
         </div>
       </section>
     </section>
   </main>
   <footer>
-
   </footer>
 
   <!-- jQuery library -->
@@ -97,5 +95,4 @@
   <!-- JavaScript -->
   <script src="./assets/js/script.js"></script>
 </body>
-
 </html>
