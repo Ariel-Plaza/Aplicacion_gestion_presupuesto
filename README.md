@@ -1,1 +1,2 @@
-# presupuesto_App
+# Aplicacion gestión de presupuesto
+## Realizada con booststrap JS.
