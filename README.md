@@ -1,2 +1,2 @@
-# Aplicacion gestión de presupuesto
-## Realizada con booststrap JS.
+# Budget management application - Aplicacion gestión de presupuesto
+## Made with booststrap JS. - Realizada con booststrap JS.
